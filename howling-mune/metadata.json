@@ -1,0 +1,6 @@
+{
+  "name": "Howling MUNE",
+  "description": "Giving you back to you. A quiet lunar premium doorway into embodiment, emotional repair, and self-relationship.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
