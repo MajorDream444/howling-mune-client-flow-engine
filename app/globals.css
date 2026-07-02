@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 33% 2%;
+    --foreground: 42 45% 92%;
+    --card: 240 20% 5%;
+    --card-foreground: 42 45% 92%;
+    --primary: 42 92% 56%;
+    --primary-foreground: 240 33% 2%;
+    --secondary: 160 22% 16%;
+    --secondary-foreground: 42 45% 92%;
+    --muted: 240 8% 14%;
+    --muted-foreground: 240 7% 64%;
+    --accent: 38 92% 60%;
+    --accent-foreground: 240 33% 2%;
+    --border: 240 8% 18%;
+    --input: 240 8% 18%;
+    --ring: 42 92% 56%;
+    --radius: 1rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+@layer components {
+  .hm-tactile-base {
+    background: linear-gradient(180deg, rgba(32, 32, 38, 0.9) 0%, rgba(6, 6, 12, 0.94) 100%);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.06), 0 24px 60px -24px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(255, 255, 255, 0.04);
+  }
+
+  .hm-glass {
+    background: linear-gradient(135deg, rgba(39, 39, 46, 0.45) 0%, rgba(12, 12, 18, 0.68) 100%);
+    backdrop-filter: blur(24px);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1), 0 16px 44px -16px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+
+  .hm-mesh-bg {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+}
