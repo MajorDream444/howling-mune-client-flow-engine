@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,22 +6,22 @@
 
 @layer base {
   :root {
-    --background: 240 33% 2%;
-    --foreground: 42 45% 92%;
-    --card: 240 20% 5%;
-    --card-foreground: 42 45% 92%;
-    --primary: 42 92% 56%;
-    --primary-foreground: 240 33% 2%;
-    --secondary: 160 22% 16%;
-    --secondary-foreground: 42 45% 92%;
-    --muted: 240 8% 14%;
-    --muted-foreground: 240 7% 64%;
-    --accent: 38 92% 60%;
-    --accent-foreground: 240 33% 2%;
-    --border: 240 8% 18%;
-    --input: 240 8% 18%;
-    --ring: 42 92% 56%;
-    --radius: 1rem;
+    --background: 150 18% 2%;
+    --foreground: 35 45% 94%;
+    --card: 150 16% 5%;
+    --card-foreground: 35 45% 94%;
+    --primary: 43 64% 52%;
+    --primary-foreground: 150 18% 2%;
+    --secondary: 150 26% 10%;
+    --secondary-foreground: 35 45% 94%;
+    --muted: 150 12% 12%;
+    --muted-foreground: 160 5% 64%;
+    --accent: 23 55% 69%;
+    --accent-foreground: 150 18% 2%;
+    --border: 43 34% 35%;
+    --input: 150 12% 16%;
+    --ring: 43 64% 52%;
+    --radius: 1.25rem;
   }
 
   * {
@@ -30,27 +30,62 @@
 
   html {
     scroll-behavior: smooth;
+    background: #050706;
   }
 
   body {
     @apply bg-background text-foreground antialiased;
+    overflow-x: hidden;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  ::selection {
+    background: rgba(212, 175, 55, 0.28);
+    color: #faf7f2;
   }
 }
 
 @layer components {
-  .hm-tactile-base {
-    background: linear-gradient(180deg, rgba(32, 32, 38, 0.9) 0%, rgba(6, 6, 12, 0.94) 100%);
-    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.06), 0 24px 60px -24px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(255, 255, 255, 0.04);
+  .hm-serif {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .hm-mono {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
   }
 
   .hm-glass {
-    background: linear-gradient(135deg, rgba(39, 39, 46, 0.45) 0%, rgba(12, 12, 18, 0.68) 100%);
-    backdrop-filter: blur(24px);
-    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1), 0 16px 44px -16px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.05);
+    background: linear-gradient(135deg, rgba(14, 21, 18, 0.52) 0%, rgba(5, 7, 6, 0.72) 100%);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+    box-shadow: inset 0 1px 1px rgba(250, 247, 242, 0.08), 0 28px 70px -28px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(197, 160, 89, 0.12);
+  }
+
+  .hm-sanctuary-card {
+    background: linear-gradient(180deg, rgba(23, 36, 30, 0.78) 0%, rgba(5, 7, 6, 0.94) 100%);
+    box-shadow: inset 0 1px 1px rgba(250, 247, 242, 0.06), 0 24px 80px -32px rgba(0, 0, 0, 0.96), 0 0 0 1px rgba(197, 160, 89, 0.12);
   }
 
   .hm-mesh-bg {
-    background-image: radial-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px);
-    background-size: 32px 32px;
+    background-image: radial-gradient(rgba(250, 247, 242, 0.032) 1px, transparent 1px);
+    background-size: 34px 34px;
+  }
+
+  .hm-gold-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(197, 160, 89, 0.42), transparent);
+  }
+
+  .hm-water-reflection {
+    background:
+      linear-gradient(180deg, rgba(212, 175, 55, 0.16), rgba(212, 175, 55, 0.02) 42%, transparent),
+      repeating-linear-gradient(90deg, rgba(250, 247, 242, 0.08) 0px, rgba(250, 247, 242, 0.02) 1px, transparent 4px, transparent 14px);
+    filter: blur(0.8px);
+    transform-origin: center top;
+  }
+
+  .hm-fog {
+    background: radial-gradient(circle at 20% 40%, rgba(250, 247, 242, 0.08), transparent 34%), radial-gradient(circle at 80% 60%, rgba(214, 159, 140, 0.07), transparent 30%);
+    filter: blur(32px);
   }
 }
