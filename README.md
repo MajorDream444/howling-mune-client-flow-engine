@@ -1,3 +1,5 @@
+[![Edit on Hanzo](https://hanzo.ai/badges/edit-on-hanzo.svg)](https://hanzo.app/dev?repo=https%3A%2F%2Fgithub.com%2FMajorDream444%2Fhowling-mune-client-flow-engine)
+
 # Howling MUNE Client Flow Engine
 
 Next.js, TypeScript, Tailwind CSS, and shadcn-compatible landing page foundation for Howling MUNE.
